@@ -2,7 +2,7 @@
 let signupBtn = document.querySelector("#signup");
 let token = localStorage.getItem('accessToken');
 
-if(token){
+if(token!==null){
     showProfilePage();
 }
 
