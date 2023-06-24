@@ -2,9 +2,11 @@
 let signupBtn = document.querySelector("#signup");
 let token = localStorage.getItem('accessToken');
 
-if(token!==null){
-    showProfilePage();
-}
+ if (token && window.location.pathname !== "/profile") {
+    window.location.href = "/profile";
+  } else if (!token && window.location.pathname === "/profile") {
+    window.location.href = "/";
+  }
 
 signupBtn.addEventListener('click',()=>{
     const name = document.getElementById('name').value
