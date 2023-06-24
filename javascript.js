@@ -55,5 +55,5 @@ function generateAccessToken(){
 
 function showProfilePage() {
     
-    window.location.href = "/Weekly%20Test%2024%20Jun/profile.html"
+    window.location.href = "/PatilDivyani/F3_WeeklyTest_2/profile.html"
 }
