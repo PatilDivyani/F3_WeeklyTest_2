@@ -47,12 +47,13 @@
       <script>
         let token = localStorage.getItem('accessToken');
         console.log(token)
-        if(token===null){
-            console.log(window.href)
-            window.location.href = ""
-    }
+        
         const user = JSON.parse(localStorage.getItem('user'));
         console.log(user)
+        if(token===null){
+            console.log(window.href)
+            window.location.href = "/PatilDivyani/F3_WeeklyTest_2/"
+    }
         function display() {
             const container = document.querySelector('.profile_container')
             console.log(container)
