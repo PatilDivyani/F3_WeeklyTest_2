@@ -7,7 +7,9 @@ let token = localStorage.getItem('accessToken');
   } else if (!token && window.location.pathname === "/profile") {
     window.location.href = "/";
   }
-
+ if (window.location.pathname === "/profile") {
+    showProfilePage();
+ }
 signupBtn.addEventListener('click',()=>{
     const name = document.getElementById('name').value
     const email = document.getElementById('email').value
