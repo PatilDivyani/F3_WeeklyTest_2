@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<style>
+    .profile_container{
+        position: absolute;
+        /* width: 176px;
+        height: 387px; */
+        top: 176px;
+        left: 52px;
+
+        font: 'Inter';
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 29.05px;
+        color: #FFFFFF;
+    }
+    .profile_container > h1{
+        margin-bottom: 100px;
+        font: 'Inter';
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 77.45px;
+    }
+  
+</style>
+<body>
+     <!-- Navbar : Header Signup Profile -->
+     <nav>
+        <div class="left">Header</div>
+        <div class="right">
+          <div>Signup</div>
+          <div>Profile</div>
+        </div>
+      </nav>
+
+      <!-- Display Content -->
+      <div class="profile_container">
+        <button type="submit" onclick="eraseToken()">Logout</button>
+      </div>
+
+      <script>
+        let token = localStorage.getItem('accessToken');
+        console.log(token)
+        if(token===null){
+            console.log(window.href)
+            window.location.href = "/Weekly%20Test%2024%20Jun/index.html"
+    }
+        const user = JSON.parse(localStorage.getItem('user'));
+        console.log(user)
+        function display() {
+            const container = document.querySelector('.profile_container')
+            console.log(container)
+        container.innerHTML = `
+        <h1>Profile</h1>
+        <h1>Full Name : ${user.name}</h1>
+        <h1>Email : ${user.email}</h1>
+        <h1>Password : ${user.password}</h1>
+        <button type="submit" onclick="eraseToken()">Logout</button>
+        `
+        }
+        display();
+        function eraseToken() {
+            localStorage.clear()
+        }
+      </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Navbar : Header Signup Profile -->
+    <nav>
+      <div class="left">Header</div>
+      <div class="right">
+        <div>Signup</div>
+        <div>Profile</div>
+      </div>
+    </nav>
+
+    <!-- Signup dialog box -->
+    <div class="signupContainer">
+      <h1>Signup</h1>
+      <form action="" method="post">
+        <div>
+          <label for="fullName">Full Name</label>
+          <input type="text" id="name"/>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email"/>
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input type="text" id="password"/>
+        </div>
+        <div>
+          <label for="confirm-password">Confirm Password</label>
+          <input type="text" id="confirm-password"/>
+        </div>
+        <p id="signupMsg"></p>
+        <!-- <p class="error">Error : All the fields are mandatory</p>
+        <p class="success">Successfully Signed Up!</p> -->
+      </form>
+      <button id="signup" type="submit">Signup</button>
+    </div>
+
+    <script src="./javascript.js"></script>
+  </body>
+</html>
