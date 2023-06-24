@@ -2,12 +2,12 @@
 let signupBtn = document.querySelector("#signup");
 let token = localStorage.getItem('accessToken');
 
- if (token && window.location.pathname !== "/profile") {
-    window.location.href = "/profile";
-  } else if (!token && window.location.pathname === "/profile") {
-    window.location.href = "/";
-  }
- if (window.location.pathname === "/profile") {
+ // if (token && window.location.pathname !== "/profile") {
+ //    window.location.href = "/profile";
+ //  } else if (!token && window.location.pathname === "/profile") {
+ //    window.location.href = "/";
+ //  }
+ if (token) {
     showProfilePage();
  }
 signupBtn.addEventListener('click',()=>{
@@ -59,5 +59,5 @@ function generateAccessToken(){
 
 function showProfilePage() {
     
-    window.location.href = "/PatilDivyani/F3_WeeklyTest_2/profile.html"
+    window.location.href = "/F3_WeeklyTest_2/profile.html"
 }
